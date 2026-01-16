@@ -696,3 +696,87 @@ h2 {
   color: var(--primary);
   text-decoration: none;
 }
+/* ===== TOP UP DETAILS ===== */
+.topup-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Card & image biar aman */
+.topup-details img,
+.topup-card {
+  max-width: 100%;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .topup-details {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .topup-details h1,
+  .topup-details h2 {
+    font-size: 22px;
+  }
+
+  .topup-details p {
+    font-size: 14px;
+  }
+
+  .topup-card {
+    margin: auto;
+  }
+}
+/* ===============================
+   RESPONSIVE TOP UP DETAIL
+   =============================== */
+
+/* DESKTOP (AMAN) */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-left {
+    text-align: left;
+  }
+
+  .project-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-preview img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .feature-card {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-card img {
+    width: 100%;
+  }
+}
