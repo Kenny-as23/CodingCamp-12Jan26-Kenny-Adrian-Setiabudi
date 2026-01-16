@@ -2,25 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Top Up Game Website | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up Game Website</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<a href="index.html#portfolio" class="back-link">
-  ← Back to Portfolio
-</a>
+<a href="index.html#portfolio" class="back-link">← Back to Portfolio</a>
 
 <section class="project-detail">
 
   <div class="project-grid">
+<!--topup-game.html-->
+    <!-- LEFT (SAMA PERSIS DENGAN LIBRARY CRUD) -->
     <div class="project-left">
-
       <h1>Top Up Game Website</h1>
-      <p class="project-subtitle">
-        Laravel-Based Game Top Up Platform
-      </p>
+      <p class="project-subtitle">Laravel-Based Game Top Up Platform</p>
 
       <p class="project-desc">
         A web-based game top up platform that allows users to select games,
@@ -28,7 +24,7 @@
         structured, and user-friendly system.
       </p>
 
-      <!-- STATS-->
+      <!-- STAT (SAMA) -->
       <div class="project-stats">
         <div class="stat-card">
           <strong>Laravel</strong>
@@ -44,7 +40,7 @@
         </div>
       </div>
 
-      <!-- TECH STACKS -->
+      <!-- TECH STACK (SAMA) -->
       <div class="tech-stack">
         <h3>Technologies Used</h3>
         <div class="tech-list">
@@ -57,10 +53,9 @@
           <span>XAMPP</span>
         </div>
       </div>
-
     </div>
 
-    <!-- RIGHT -->
+    <!-- RIGHT (SAMA PERSIS) -->
     <div class="project-right">
 
       <div class="project-preview">
@@ -81,30 +76,10 @@
 
     </div>
 
-  </div>
-
-</section>
-  
-<section class="panel-section">
+    <section class="panel-section">
   <div class="panel-grid">
 
-    <div class="panel-card">
-      <img src="assets/images/topup-package.png" alt="Top Up Package">
-
-      <h3>Top Up Package</h3>
-      <p>
-        Users can select from various top up packages for their chosen game.
-        Each package displays the amount of in-game currency and its price.
-      </p>
-
-      <ul>
-        <li>Dynamic package listing from database</li>
-        <li>Package details (currency & price)</li>
-        <li>Package selection interface</li>
-        <li>Bookmarked packages</li>
-      </ul>
-    </div>
-
+    <!-- PACKAGE -->
     <div class="panel-card">
       <img src="assets/images/topup-package.png" alt="Top Up Package">
 
@@ -123,6 +98,8 @@
     </div>
 
   </div>
+
 </section>
+
 </body>
 </html>

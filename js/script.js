@@ -23,3 +23,9 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   this.reset();
 });
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+navToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
