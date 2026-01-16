@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--index.html-->
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <h1>Hi, I'm <span id="userName"></span></h1>
+  <p class="subtitle">Web Developer & Software Engineer</p>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2>About Me</h2>
+  <p class="content">
+    I am a passionate software developer with a strong interest in building
+    modern, responsive, and user-friendly web applications. I enjoy learning
+    new technologies and improving my skills continuously.
+  </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/html5/E34F26">
+      <h3>HTML</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+      <h3>CSS</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/javascript/F7DF1E">
+      <h3>JavaScript</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/flutter/02569B">
+      <h3>Flutter</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/laravel/FF2D20">
+      <h3>Laravel</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/php/777BB4">
+      <h3>PHP</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/xampp/FB7A24">
+      <h3>MySQL</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/github/181717">
+      <h3>GitHub</h3>
+    </div>
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/figma/F24E1E">
+      <h3>UI / UX Design</h3>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+
+  <div class="portfolio-grid">
+
+    <!-- ===== PORTFOLIO 1 ===== -->
+    <div class="portfolio-card">
+
+      <img src="assets/images/library-crud.png" alt="Library CRUD System">
+
+      <h3>Library CRUD System</h3>
+
+      <p>
+        Web-based library management system with role-based login,
+        book management, borrowing, returning, and history features.
+      </p>
+
+      <div class="portfolio-actions">
+        <a href="https://drive.google.com/file/d/1iQL78oZ-QT4R90TwCot8W0Tl5CqRLeYW/view?usp=sharing"
+           target="_blank"
+           class="btn-live">
+          Live Demo ↗
+        </a>
+
+        <a href="library-crud.html" class="details-link">
+          Details →
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== PORTFOLIO 2 ===== -->
+    <div class="portfolio-card">
+
+      <img src="assets/images/topup-home.png" alt="Top Up Game Website">
+
+      <h3>Top Up Game Website</h3>
+
+      <p>
+        Laravel-based game top up platform that allows users to select games,
+        choose packages, and complete transactions with a clean flow.
+      </p>
+
+      <div class="portfolio-actions">
+        <a href="https://drive.google.com/file/d/1Ru8jFLSOGFQT5-JzDmuOESHE429NQ1ZL/view?usp=sharing"
+           target="_blank"
+           class="btn-live">
+          Live Demo ↗
+        </a>
+
+        <a href="topup-game.html" class="details-link">
+          Details →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form id="contactForm">
+    <input id="name" type="text" placeholder="Your Name">
+    <input id="email" type="email" placeholder="Your Email">
+    <input id="phone" type="text" placeholder="Phone Number">
+    <textarea id="messageText" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="result"></div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
