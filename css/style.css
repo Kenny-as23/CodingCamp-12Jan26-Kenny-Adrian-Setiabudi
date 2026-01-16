@@ -834,3 +834,114 @@ h2 {
     height: auto;
   }
 }
+/* ================= MOBILE RESPONSIVE FIX (DETAIL PAGES) ================= */
+@media (max-width: 768px) {
+
+  /* ===== NAVBAR ===== */
+  nav ul {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  nav ul li a {
+    font-size: 14px;   /* 🔥 dikecilkan */
+  }
+
+  /* ===== PROJECT DETAIL GLOBAL ===== */
+  .project-detail {
+    padding: 60px 16px 80px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* 🔥 1 kolom */
+    gap: 40px;
+  }
+
+  /* ===== TITLE & DESC ===== */
+  .project-left h1 {
+    font-size: 28px;     /* 🔥 SAMAKAN DENGAN LIBRARY CRUD */
+    line-height: 1.3;
+  }
+
+  .project-subtitle {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 26px;
+  }
+
+  /* ===== STATS ===== */
+  .project-stats {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .stat-card {
+    flex: 1 1 calc(50% - 6px);
+    padding: 12px;
+  }
+
+  /* ===== TECH STACK ===== */
+  .tech-list {
+    gap: 8px;
+  }
+
+  .tech-list span {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  /* ===== IMAGE PREVIEW ===== */
+  .project-preview img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 22px;
+  }
+
+  /* ===== FEATURE CARD ===== */
+  .feature-card {
+    padding: 22px;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+  }
+
+  .feature-card ul {
+    font-size: 14px;
+  }
+
+  /* ===== PANEL SECTION (PACKAGE) ===== */
+  .panel-section {
+    padding: 50px 0 0;
+  }
+
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-card {
+    padding: 22px;
+  }
+
+  .panel-card h3 {
+    font-size: 18px;
+  }
+
+  .panel-card p,
+  .panel-card ul {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ===== BACK LINK ===== */
+  .back-link {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
