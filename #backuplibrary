@@ -11,12 +11,10 @@
 <a href="index.html#portfolio" class="back-link">
   ← Back to Portfolio
 </a>
-<!--library-crud.html-->
+
 <section class="project-detail">
 
   <div class="project-grid">
-
-    <!-- LEFT CONTENT -->
     <div class="project-left">
 
       <h1>Library CRUD System</h1>
