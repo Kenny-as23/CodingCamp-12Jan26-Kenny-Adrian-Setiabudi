@@ -748,9 +748,10 @@ h2 {
 /* =========================
    PROJECT DETAIL RESPONSIVE
    ========================= */
+
 @media (max-width: 992px) {
   .project-grid {
-    grid-template-columns: 1fr; /* jadi 1 kolom */
+    grid-template-columns: 1fr;
     gap: 32px;
   }
 
@@ -769,7 +770,10 @@ h2 {
     margin-top: 24px;
   }
 }
+
 @media (max-width: 768px) {
+
+  /* ===== PANEL ===== */
   .panel-grid {
     grid-template-columns: 1fr;
   }
@@ -782,20 +786,20 @@ h2 {
     width: 100%;
     height: auto;
   }
-}
+
   /* ===== PROJECT DETAIL GLOBAL ===== */
   .project-detail {
     padding: 60px 16px 80px;
   }
 
   .project-grid {
-    grid-template-columns: 1fr; /* 🔥 1 kolom */
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   /* ===== TITLE & DESC ===== */
   .project-left h1 {
-    font-size: 28px;     /* 🔥 SAMAKAN DENGAN LIBRARY CRUD */
+    font-size: 28px;      /* ✅ MOBILE ONLY */
     line-height: 1.3;
   }
 
@@ -826,6 +830,12 @@ h2 {
   .tech-list {
     gap: 8px;
   }
+
+  .tech-list span {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
 
   .tech-list span {
     font-size: 12px;
