@@ -605,12 +605,6 @@ h2 {
 
 /* ================= NAVBAR MOBILE ================= */
 @media (max-width: 768px) {
-
-  .nav-toggle {
-    display: block;
-    z-index: 100000;
-  }
-
   .nav-links {
     position: absolute;
     top: 64px;
@@ -623,17 +617,56 @@ h2 {
     gap: 18px;
     padding: 24px 0;
 
-    display: none;
-    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 
-    pointer-events: none; /* 🔥 PENTING */
+    pointer-events: none;
+    z-index: 9999;
   }
 
   .nav-links.active {
-    display: flex;
-    pointer-events: auto; /* 🔥 */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
+
+/* ================= MOBILE NAV LINK FEEDBACK ================= */
+
+@media (max-width: 768px) {
+  .nav-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    transition: background 0.25s ease, transform 0.15s ease;
+  }
+
+  .nav-links a:active {
+    background: rgba(99, 102, 241, 0.08);
+    transform: scale(0.97);
+  }
+}
+
+
+/* ================= HAMBURGER BUTTON EFFECT ================= */
+
+.nav-toggle {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle:active {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+/* ketika menu aktif → icon berubah */
+.nav-toggle.active {
+  transform: rotate(90deg);
+}
+
 
 /* ================= PROJECT DETAIL MODERN FIX ================= */
 

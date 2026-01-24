@@ -34,20 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ================= NAVBAR TOGGLE =================
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
+// ================= NAVBAR TOGGLE =================
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
 
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  }
-  document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+if (navToggle && navLinks) {
+  // Toggle menu
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    navToggle.classList.toggle("active");
   });
-});
 
-
+  // Tutup menu saat link diklik
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      navToggle.classList.remove("active");
+    });
+  });
+}
 });
