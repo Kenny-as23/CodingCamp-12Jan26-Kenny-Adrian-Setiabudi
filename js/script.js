@@ -1,31 +1,53 @@
-document.getElementById("userName").innerText = "Kenny Adrian Setiabudi";
+document.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const message = document.getElementById("messageText").value.trim();
-
-  if (!name || !email || !phone || !message) {
-    alert("Please fill all fields");
-    return;
+  // ================= USER NAME =================
+  const userName = document.getElementById("userName");
+  if (userName) {
+    userName.innerText = "Kenny Adrian Setiabudi";
   }
 
-  document.getElementById("result").innerHTML = `
-    <h3>Message Sent</h3>
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Phone:</strong> ${phone}</p>
-    <p><strong>Message:</strong> ${message}</p>
-  `;
+  // ================= CONTACT FORM =================
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  this.reset();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("messageText").value.trim();
+
+      if (!name || !email || !phone || !message) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      document.getElementById("result").innerHTML = `
+        <h3>Message Sent</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `;
+
+      this.reset();
+    });
+  }
+
+  // ================= NAVBAR TOGGLE =================
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+  document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+
 });
