@@ -662,9 +662,12 @@ h2 {
   opacity: 0.7;
 }
 
-/* ketika menu aktif → icon berubah */
-.nav-toggle.active {
-  transform: rotate(90deg);
+.nav-toggle {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle:active {
+  transform: scale(0.9);
 }
 
 
