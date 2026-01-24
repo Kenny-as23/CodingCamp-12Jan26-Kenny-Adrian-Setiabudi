@@ -605,6 +605,15 @@ h2 {
 
 /* ================= NAVBAR MOBILE ================= */
 @media (max-width: 768px) {
+
+  /* TAMPILKAN HAMBURGER */
+  .nav-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* SEMBUNYIKAN MENU DESKTOP */
   .nav-links {
     position: absolute;
     top: 64px;
@@ -619,12 +628,11 @@ h2 {
 
     opacity: 0;
     transform: translateY(-10px);
+    pointer-events: none;
+
     transition:
       opacity 0.35s ease,
       transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-
-    pointer-events: none;
-    z-index: 9999;
   }
 
   .nav-links.active {
@@ -633,6 +641,7 @@ h2 {
     pointer-events: auto;
   }
 }
+
 
 /* ================= MOBILE NAV LINK FEEDBACK ================= */
 
