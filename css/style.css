@@ -1370,23 +1370,21 @@ h2 {
   color: var(--primary);
 }
 
-/* =========================================================
-   NAVBAR DETAIL (BACK + THEME)
-   ========================================================= */
+/* ================= NAVBAR DETAIL (FINAL FIX) ================= */
+
 .navbar-detail {
   position: sticky;
   top: 0;
   z-index: 9999;
-
-  background: color-mix(in srgb, var(--bg-soft) 95%, transparent);
-  backdrop-filter: blur(10px);
+  background: var(--bg-soft);
   border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
 }
 
 .nav-detail-container {
   max-width: 1200px;
   margin: auto;
-  padding: 14px 18px;
+  padding: 14px 20px;
 
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -1395,9 +1393,20 @@ h2 {
 
 /* LEFT */
 .navbar-detail .back-link {
-  margin: 0;
   padding: 8px 16px;
   font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.1);
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.navbar-detail .back-link:hover {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  transform: translateX(-4px);
 }
 
 /* CENTER */
@@ -1411,6 +1420,30 @@ h2 {
 .navbar-detail .theme-toggle {
   justify-self: end;
 }
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .nav-detail-container {
+    padding: 12px 14px;
+  }
+
+  /* Back icon only */
+  .navbar-detail .back-link {
+    font-size: 0;
+    padding: 6px 10px;
+  }
+
+  .navbar-detail .back-link::before {
+    content: "←";
+    font-size: 16px;
+  }
+
+  .navbar-detail .nav-logo {
+    font-size: 16px;
+  }
+}
+
 
 /* =========================================================
    MOBILE DETAIL
@@ -1448,27 +1481,6 @@ h2 {
   }
 }
 
-@media (max-width: 480px) {
-
-  .navbar-detail .nav-detail-container {
-    padding: 12px 14px;
-  }
-
-  .navbar-detail .back-link {
-    font-size: 0;
-    padding: 6px 10px;
-  }
-
-  .navbar-detail .back-link::before {
-    content: "←";
-    font-size: 16px;
-  }
-
-  .navbar-detail .nav-logo {
-    font-size: 16px;
-  }
-}
-
 /* =========================================================
    THEME TRANSITION FINAL (ANTI WHITE FLASH)
    ========================================================= */
@@ -1484,21 +1496,13 @@ html:not(.theme-ready) * {
 }
 
 /* smooth transition setelah ready */
+/* THEME TRANSITION ONLY (NO TRANSFORM) */
 body,
 section,
 .navbar,
-.navbar-detail,
-.portfolio-card,
-.certificate-card,
-.all-cert-card,
-.contact-list li,
-.skill-card,
-.panel-card,
-.feature-card,
-.stat-card {
+.navbar-detail {
   transition:
     background-color 0.45s ease,
     color 0.45s ease,
-    border-color 0.45s ease,
-    box-shadow 0.45s ease;
+    border-color 0.45s ease;
 }
