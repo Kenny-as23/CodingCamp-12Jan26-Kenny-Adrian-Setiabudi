@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Company Profile</title>
+  <title>Personal Portfolio Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,22 +14,36 @@
 
     <div class="nav-logo">Kenny</div>
 
-    <button class="nav-toggle" id="navToggle">
-      ☰
-    </button>
+    <!-- ACTION BUTTONS -->
+    <div class="nav-actions">
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle theme"
+      >
+        🌙
+      </button>
 
-    <ul class="nav-links" id="navLinks">
+      <button
+        id="navToggle"
+        class="nav-toggle"
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
+    </div>
+
+    <ul id="navLinks" class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#certifications">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
   </div>
 </nav>
-
-
 
 <!-- ================= HERO ================= -->
 <section id="home" class="hero">
@@ -41,9 +55,9 @@
 <section id="about">
   <h2>About Me</h2>
   <p class="content">
-    I am a passionate software developer with a strong interest in building
-    modern, responsive, and user-friendly web applications. I enjoy learning
-    new technologies and improving my skills continuously.
+    I am a Computer Science student at IBI Kwik Kian Gie with an interest in front-end development and UI/UX design. I focus on creating clean and
+user-friendly interface designs, translating ideas into visual concepts. I am currently improving my web development skills and open to learning
+full-stack development as needed.
   </p>
 </section>
 
@@ -51,7 +65,13 @@
 <section id="skills">
   <h2>Skills</h2>
 
-  <div class="skills-grid">
+  <div class="skills-grid"> 
+
+    <div class="skill-card">
+      <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python Logo">
+      <h3>Python</h3>
+    </div>
+
     <div class="skill-card">
       <img src="https://cdn.simpleicons.org/html5/E34F26">
       <h3>HTML</h3>
@@ -105,12 +125,12 @@
 
   <div class="portfolio-grid">
 
-    <!-- ===== PORTFOLIO 1 ===== -->
+    <!-- ===== PORTFOLIO Library Management System ===== -->
     <div class="portfolio-card">
 
-      <img src="assets/images/library-crud.png" alt="Library CRUD System">
+      <img src="assets/images/library-crud.png" alt="Library Management System">
 
-      <h3>Library CRUD System</h3>
+      <h3>Library Management System</h3>
 
       <p>
         Web-based library management system with role-based login,
@@ -118,7 +138,7 @@
       </p>
 
       <div class="portfolio-actions">
-        <a href="https://drive.google.com/file/d/1iQL78oZ-QT4R90TwCot8W0Tl5CqRLeYW/view?usp=sharing"
+        <a href="https://drive.google.com/file/d/151dzC0BQk5ssSJlZcvnREZIAWT_b6VMp/view?usp=sharing"
            target="_blank"
            class="btn-live">
           Live Demo ↗
@@ -130,12 +150,12 @@
       </div>
     </div>
 
-    <!-- ===== PORTFOLIO 2 ===== -->
+    <!-- ===== PORTFOLIO Game Top-Up Website ===== -->
     <div class="portfolio-card">
 
-      <img src="assets/images/topup-home.png" alt="Top Up Game Website">
+      <img src="assets/images/topup-home.png" alt="Game Top-Up Website">
 
-      <h3>Top Up Game Website</h3>
+      <h3>Game Top-Up Website</h3>
 
       <p>
         Laravel-based game top up platform that allows users to select games,
@@ -143,7 +163,7 @@
       </p>
 
       <div class="portfolio-actions">
-        <a href="https://drive.google.com/file/d/1Ru8jFLSOGFQT5-JzDmuOESHE429NQ1ZL/view?usp=sharing"
+        <a href="https://drive.google.com/file/d/1LY4ChIU-oWs8RVrn31RbQh3eeg8cM_-h/view?usp=sharing"
            target="_blank"
            class="btn-live">
           Live Demo ↗
@@ -155,6 +175,194 @@
       </div>
     </div>
 
+    <!-- ===== PORTFOLIO Kenny's Coffee UI/UX Design ===== -->
+    <div class="portfolio-card">
+  <img src="assets/images/kenny-coffee-uiux.png" alt="Kenny's Coffee UI/UX Design">
+
+  <h3>Kenny’s Coffee UI/UX Design</h3>
+
+  <p>
+    UI/UX design for a coffee brand website, focusing on visual
+    storytelling, product presentation, and user experience.
+  </p>
+
+  <div class="portfolio-actions">
+    <a href="https://www.figma.com/proto/MzpOZSjpdvgbQEAoY60i7j/Kenny-s-Coffee"
+       target="_blank"
+       class="btn-live">
+      View Prototype ↗
+    </a>
+
+    <a href="kenny-coffee-uiux.html" class="details-link">
+  Details →
+    </a>
+  </div>
+</div>
+
+<!-- ===== PORTFOLIO : MEMORY WORD GAME ===== -->
+<div class="portfolio-card">
+  <img src="assets/images/memory-word-game.png" alt="Memory Word Game">
+
+  <h3>Memory Word Game</h3>
+
+  <p>
+    A Flutter-based memory word game implementing event-driven gameplay,
+    stateful widgets, real-time timers, and local data persistence using
+    IndexedDB. Supports single-player and two-player modes with a
+    competitive leaderboard system.
+  </p>
+
+  <div class="portfolio-actions">
+    <a href="https://drive.google.com/file/d/13fZjrijKUeXCVeGJkk0YAVLd56M_D7w3/view?usp=sharing"
+       target="_blank"
+       class="btn-live">
+      Live Demo ↗
+    </a>
+
+    <a href="memory-word-game.html" class="details-link">
+      Details →
+    </a>
+  </div>
+</div>
+
+<!-- ===== PORTFOLIO AI Face Emotion Detection ===== -->
+<div class="portfolio-card">
+  <img src="assets/images/face-emotion-detection.png" alt="AI Face Emotion Detection">
+
+  <h3>AI Face Emotion Detection</h3>
+
+  <p>
+    A real-time AI-powered web application that detects facial emotions
+    using computer vision and deep learning, featuring live camera
+    analysis, image upload, emotion visualization, and mental condition
+    indicators.
+  </p>
+
+  <div class="portfolio-actions">
+    <a href="https://kenny-as23.github.io/Face-Emotion-Detection/"
+       target="_blank"
+       class="btn-live">
+      View Prototype ↗
+    </a>
+
+    <a href="face-emotion-detection.html" class="details-link">
+      Details →
+    </a>
+  </div>
+</div>
+
+<!-- ===== PORTFOLIO : ACCESSORIES DETECTION YOLO ===== -->
+<div class="portfolio-card">
+  <img src="assets/images/accessories-detection-yolo.png" alt="Accessories Detection YOLO">
+
+  <h3>Accessories Detection YOLO</h3>
+
+  <p>
+    A real-time accessories detection system using a custom-trained YOLO
+    model. The application detects restricted objects from live camera
+    input, images, and videos, featuring confidence-based filtering,
+    FPS monitoring, and visual alert overlays.
+  </p>
+
+  <div class="portfolio-actions">
+    <a href="https://drive.google.com/file/d/1oS86GLcqiaw1j8OLk9Fep5EF6T21h2Yr/view?usp=sharing"
+       target="_blank"
+       class="btn-live">
+      Live Demo ↗
+    </a>
+
+    <a href="accessories-detection-yolo.html" class="details-link">
+      Details →
+    </a>
+  </div>
+</div>
+
+<!-- ===== PORTFOLIO : MINDMAZE ===== -->
+<div class="portfolio-card">
+  <img src="assets/images/MindMaze.png" alt="MindMaze Strategy Puzzle Game">
+
+  <h3>MindMaze</h3>
+
+  <p>
+    A web-based strategy puzzle game designed to challenge logical thinking
+    and problem-solving skills. Built with a separated frontend-backend
+    architecture, featuring modular game logic, progressive difficulty,
+    and an interactive user interface.
+  </p>
+
+  <div class="portfolio-actions">
+    <a href="https://drive.google.com/file/d/1wdnkti7YqK49of41YGC5-0z9KyF6APrx/view?usp=sharing"
+       target="_blank"
+       class="btn-live">
+      Live Demo ↗
+    </a>
+
+    <a href="mindmaze.html" class="details-link">
+      Details →
+    </a>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications">
+  <h2>Certifications</h2>
+
+  <div class="certificate-grid">
+
+    <div class="certificate-card">
+      <img src="assets/images/revou-certificate.jpg" alt="RevoU Certificate">
+
+      <div class="certificate-content">
+        <h3>Intro to Software Engineering</h3>
+        <p class="issuer">RevoU – Coding Camp</p>
+
+        <p class="certificate-desc">
+          Certificate of Attendance for completing a 1-week online course
+          covering fundamental concepts of software engineering.
+        </p>
+
+        <div class="certificate-meta">
+          <span>Issued: 16 January 2026</span>
+          <span>Credential ID: CCSE 120126-01-1-00103</span>
+        </div>
+
+        <a href="assets/images/revou-certificate.jpg"
+           target="_blank"
+           class="btn-primary">
+          View Certificate ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= ALL CERTIFICATES ================= -->
+<section class="all-certificates">
+  <div class="all-cert-card">
+
+    <div class="all-cert-content">
+      <h3>Kenny’s Certificates</h3>
+      <p>
+        A complete collection of my certificates from courses, bootcamps,
+        and learning programs related to software development, UI/UX,
+        and technology.
+      </p>
+
+      <a
+        href="https://drive.google.com/drive/folders/1JY8bBl0LGh34Q9f1igtqDydfUxXl5QBx?usp=sharing"
+        target="_blank"
+        class="all-cert-btn"
+      >
+        View All Certificates ↗
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
   </div>
 </section>
 
@@ -162,15 +370,64 @@
 <section id="contact">
   <h2>Contact Me</h2>
 
-  <form id="contactForm">
-    <input id="name" type="text" placeholder="Your Name">
-    <input id="email" type="email" placeholder="Your Email">
-    <input id="phone" type="text" placeholder="Phone Number">
-    <textarea id="messageText" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-grid">
 
-  <div id="result"></div>
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h3>Let’s Connect</h3>
+      <p>
+        Feel free to reach out for collaboration, project discussion,
+        or any opportunity related to software development.
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <span>📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>kennyas0705@email.com</p>
+          </div>
+        </li>
+
+        <li>
+          <span>📱</span>
+          <div>
+            <strong>Phone</strong>
+            <p>+62 8222 9764 801</p>
+          </div>
+        </li>
+
+        <li>
+  <span class="ig-icon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <defs>
+        <linearGradient id="igGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#feda75"/>
+          <stop offset="25%" stop-color="#fa7e1e"/>
+          <stop offset="50%" stop-color="#d62976"/>
+          <stop offset="75%" stop-color="#962fbf"/>
+          <stop offset="100%" stop-color="#4f5bd5"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="6" stroke="url(#igGradient)" stroke-width="2"/>
+      <circle cx="12" cy="12" r="4" stroke="url(#igGradient)" stroke-width="2"/>
+      <circle cx="17.5" cy="6.5" r="1.2" fill="url(#igGradient)"/>
+    </svg>
+  </span>
+
+  <div>
+    <strong>Instagram</strong>
+    <p>
+      <a href="https://www.instagram.com/kennn._11/"
+         target="_blank"
+         rel="noopener noreferrer">
+        @kennn._11
+      </a>
+    </p>
+  </div>
+</li>
+
+  </div>
 </section>
 
 <script src="js/script.js"></script>

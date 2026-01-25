@@ -4,20 +4,37 @@
   <meta charset="UTF-8">
   <title>Library CRUD System | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLOBAL STYLE -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ================= FLOATING THEME TOGGLE ================= -->
+<button
+  id="themeToggle"
+  class="theme-toggle"
+  aria-label="Toggle theme"
+  style="position:fixed;top:20px;right:20px;z-index:9999"
+>
+  🌙
+</button>
+
+<!-- ================= BACK LINK ================= -->
 <a href="index.html#portfolio" class="back-link">
   ← Back to Portfolio
 </a>
 
+<!-- ================= PROJECT DETAIL ================= -->
 <section class="project-detail">
 
   <div class="project-grid">
+
+    <!-- LEFT CONTENT -->
     <div class="project-left">
 
       <h1>Library Management System</h1>
+
       <p class="project-subtitle">
         Web-Based Library Management System
       </p>
@@ -86,6 +103,7 @@
 
 <!-- ================= ADMIN & USER PREVIEW ================= -->
 <section class="panel-section">
+
   <div class="panel-grid">
 
     <!-- ADMIN PANEL -->
@@ -125,6 +143,11 @@
     </div>
 
   </div>
+
 </section>
+
+<!-- ================= GLOBAL SCRIPT (WAJIB) ================= -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
