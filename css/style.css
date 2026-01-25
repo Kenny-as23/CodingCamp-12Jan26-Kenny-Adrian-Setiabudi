@@ -1468,3 +1468,44 @@ html {
 html:not(.theme-ready) * {
   transition: none !important;
 }
+/* ================= NAV DETAIL MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  .nav-detail {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .nav-left {
+    justify-self: start;
+  }
+
+  .nav-center {
+    justify-self: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .nav-right-group {
+    justify-self: end;
+  }
+
+  /* Back button diperkecil & rapi */
+  .back-link {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-link {
+    padding: 6px 10px;
+    font-size: 0;
+  }
+
+  .back-link::before {
+    content: "←";
+    font-size: 16px;
+  }
+}
