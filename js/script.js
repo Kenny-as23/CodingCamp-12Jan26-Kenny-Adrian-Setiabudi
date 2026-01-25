@@ -39,13 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("navLinks");
 
   if (navToggle && navLinks) {
-    // Toggle menu
     navToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
       navToggle.classList.toggle("active");
     });
 
-    // Tutup menu saat link diklik
     document.querySelectorAll(".nav-links a").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -54,22 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-// ================= THEME TOGGLE (DARK / LIGHT) =================
-const themeToggle = document.getElementById("themeToggle");
+  // ================= THEME TOGGLE (DARK / LIGHT) =================
+  const themeToggle = document.getElementById("themeToggle");
 
-if (themeToggle) {
-  const savedTheme = localStorage.getItem("theme");
+  if (themeToggle) {
 
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark");
+    // 🔥 load saved theme (sinkron dengan <head>)
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+
+    themeToggle.addEventListener("click", () => {
+
+      // animasi halus
+      document.documentElement.classList.add("theme-switching");
+
+      document.documentElement.classList.toggle("dark");
+
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+
+      setTimeout(() => {
+        document.documentElement.classList.remove("theme-switching");
+      }, 400);
+    });
   }
 
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    const isDark = document.body.classList.contains("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+  // ================= ENABLE TRANSITION AFTER LOAD =================
+  window.addEventListener("load", () => {
+    document.documentElement.classList.add("theme-ready");
   });
-}
 
 });

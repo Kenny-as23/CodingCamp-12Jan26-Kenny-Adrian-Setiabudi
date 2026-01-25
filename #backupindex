@@ -4,51 +4,49 @@
   <meta charset="UTF-8">
   <title>Personal Portfolio Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 <!--index.html-->
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar">
   <div class="nav-container">
 
-    <div class="nav-logo">Kenny</div>
-
-    <!-- ACTION BUTTONS -->
-    <div class="nav-actions">
+    <!-- LEFT: LOGO + THEME -->
+    <div class="nav-left">
+      <div class="nav-logo">Kenny</div>
 
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <!-- SUN -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+          <path stroke="currentColor" stroke-width="2"
+            d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12
+               M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+        </svg>
 
-  <!-- SUN -->
-  <svg class="icon-sun" viewBox="0 0 24 24" fill="none">
-    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-    <path stroke="currentColor" stroke-width="2"
-      d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12
-         M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
-  </svg>
-
-  <!-- MOON -->
-  <svg class="icon-moon" viewBox="0 0 24 24" fill="none">
-    <path
-      d="M21 12.79A9 9 0 1111.21 3
-         7 7 0 0021 12.79z"
-      stroke="currentColor"
-      stroke-width="2"
-      fill="none"
-    />
-  </svg>
-
-</button>
-
-      <button
-        id="navToggle"
-        class="nav-toggle"
-        aria-label="Toggle menu"
-      >
-        ☰
+        <!-- MOON -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M21 12.79A9 9 0 1111.21 3
+               7 7 0 0021 12.79z"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+        </svg>
       </button>
     </div>
 
+    <!-- RIGHT: NAV LINKS -->
     <ul id="navLinks" class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -57,7 +55,6 @@
       <li><a href="#certifications">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-
   </div>
 </nav>
 

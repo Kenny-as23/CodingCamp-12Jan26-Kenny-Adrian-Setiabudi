@@ -27,7 +27,7 @@ html {
 }
 
 
-body.dark {
+.dark {
   --bg: #0b1120;
   --bg-soft: #0f172a;
   --text: #e5e7eb;
@@ -602,11 +602,6 @@ h2 {
   justify-content: space-between;
 }
 
-.nav-logo {
-  font-weight: 700;
-  font-size: 20px;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -780,12 +775,12 @@ h2 {
 }
 
 /* === DARK MODE === */
-body.dark .icon-sun {
+.dark .icon-sun {
   opacity: 0;
   transform: rotate(90deg) scale(0.5);
 }
 
-body.dark .icon-moon {
+.dark .icon-moon {
   opacity: 1;
   transform: rotate(0deg) scale(1);
 }
@@ -802,11 +797,6 @@ body.dark .icon-moon {
 
 
 /* ================= HAMBURGER BUTTON EFFECT ================= */
-
-.nav-toggle {
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
 .nav-toggle:active {
   transform: scale(0.9);
   opacity: 0.7;
@@ -1111,8 +1101,8 @@ body.dark .icon-moon {
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
-body.dark .all-cert-content h3,
-body.dark .all-cert-content p {
+.dark .all-cert-content h3,
+.dark .all-cert-content p {
   color: var(--text);
 }
 
@@ -1300,7 +1290,7 @@ body.dark .all-cert-content p {
 }
 
 
-body.dark .theme-toggle span {
+.dark .theme-toggle span {
   transform: rotate(180deg) scale(1.1);
 }
 
@@ -1322,24 +1312,24 @@ body.theme-switching .skill-card {
 
 /* ================= PROJECT DETAIL DARK MODE ================= */
 
-body.dark .project-detail {
+.dark .project-detail {
   background: var(--bg);
 }
 
 /* Judul & teks */
-body.dark .project-left h1,
-body.dark .project-left h2,
-body.dark .project-left h3 {
+.dark .project-left h1,
+.dark .project-left h2,
+.dark .project-left h3 {
   color: var(--text);
 }
 
-body.dark .project-subtitle,
-body.dark .project-desc {
+.dark .project-subtitle,
+.dark .project-desc {
   color: var(--text-muted);
 }
 
 /* Feature Card */
-body.dark .feature-card {
+.dark .feature-card {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
@@ -1349,40 +1339,40 @@ body.dark .feature-card {
 }
 
 /* Feature list */
-body.dark .feature-card ul,
-body.dark .feature-card li {
+.dark .feature-card ul,
+.dark .feature-card li {
   color: var(--text-muted);
 }
 
 /* Stat card */
-body.dark .stat-card {
+.dark .stat-card {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   color: var(--text);
 }
 
 /* Tech tags */
-body.dark .tech-list span {
+.dark .tech-list span {
   background: rgba(99,102,241,0.18);
   color: #c7d2fe;
 }
 
 /* Preview image backdrop */
-body.dark .project-preview img {
+.dark .project-preview img {
   background: rgba(255,255,255,0.04);
 }
 /* ================= PANEL LIST FIX (DARK MODE) ================= */
 
-body.dark .panel-card ul {
+.dark .panel-card ul {
   color: var(--text-muted);
 }
 
-body.dark .panel-card ul li {
+.dark .panel-card ul li {
   color: var(--text-muted);
 }
 
 /* biar bullet lebih jelas */
-body.dark .panel-card ul li::marker {
+.dark .panel-card ul li::marker {
   color: var(--primary);
 }
 
@@ -1394,6 +1384,87 @@ body.dark .panel-card ul li::marker {
 }
 
 /* DARK MODE → hamburger jadi terang */
-body.dark .nav-toggle {
+.dark .nav-toggle {
   color: #e5e7eb; /* terang, konsisten dengan text dark mode */
+}
+/* ================= NAV DETAIL FIXED ================= */
+.nav-detail {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-left .back-link {
+  margin: 0;
+  padding: 8px 16px;
+}
+
+.nav-left {
+  justify-self: start;
+}
+
+.nav-center {
+  justify-self: center;
+}
+
+.nav-right {
+  justify-self: end;
+}
+.navbar .back-link {
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 14px;
+  background: rgba(99,102,241,0.12);
+  border-radius: 999px;
+}
+.navbar .back-link {
+  background: rgba(99,102,241,0.10);
+  color: var(--primary);
+}
+
+.navbar .back-link:hover {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  transform: translateX(-4px);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.35);
+}
+
+@media (max-width: 768px) {
+  .nav-detail {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .nav-left {
+    justify-self: flex-start;
+  }
+
+  .nav-right-group {
+    justify-self: flex-end;
+  }
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* remove transition on initial load to prevent flash */
+html {
+  background: var(--bg);
+}
+
+html:not(.theme-ready) * {
+  transition: none !important;
 }
