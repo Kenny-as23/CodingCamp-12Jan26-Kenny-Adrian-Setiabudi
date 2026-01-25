@@ -54,41 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ================= THEME TOGGLE (DARK / LIGHT) =================
+// ================= THEME TOGGLE (DARK / LIGHT) =================
 const themeToggle = document.getElementById("themeToggle");
 
 if (themeToggle) {
-  const icon = themeToggle.querySelector("span");
-
-  // load saved theme
   const savedTheme = localStorage.getItem("theme");
+
   if (savedTheme === "dark") {
     document.body.classList.add("dark");
-    if (icon) icon.textContent = "🌙";
   }
 
   themeToggle.addEventListener("click", () => {
-  // tambahkan class animasi
-  document.body.classList.add("theme-switching");
+    document.body.classList.toggle("dark");
 
-  document.body.classList.toggle("dark");
-
-  const isDark = document.body.classList.contains("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-
-  // icon swap
-  if (icon) {
-    icon.style.opacity = "0";
-    setTimeout(() => {
-      icon.textContent = isDark ? "🌙" : "☀️";
-      icon.style.opacity = "1";
-    }, 200);
-  }
-
-  // hapus class animasi setelah selesai
-  setTimeout(() => {
-    document.body.classList.remove("theme-switching");
-  }, 450);
-});
+    const isDark = document.body.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
 }
+
 });
