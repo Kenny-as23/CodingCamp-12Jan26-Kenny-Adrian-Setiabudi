@@ -1336,24 +1336,9 @@ body.dark .panel-card ul li::marker {
   color: var(--primary);
 }
 
-/* ================= MOBILE CLICK FIX ================= */
-
+/* FIX THEME TOGGLE MOBILE CLICK */
 .theme-toggle {
   position: relative;
   z-index: 100001;
   pointer-events: auto;
-}
-
-.navbar {
-  z-index: 100000;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
 }
