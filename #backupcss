@@ -684,7 +684,7 @@ h2 {
 
     opacity: 0;
     transform: translateY(-10px);
-    pointer-events: none;
+    pointer-events: auto;
 
     transition:
       opacity 0.35s ease,
@@ -1334,4 +1334,11 @@ body.dark .panel-card ul li {
 /* biar bullet lebih jelas */
 body.dark .panel-card ul li::marker {
   color: var(--primary);
+}
+
+/* FIX THEME TOGGLE MOBILE CLICK */
+.theme-toggle {
+  position: relative;
+  z-index: 100001;
+  pointer-events: auto;
 }
