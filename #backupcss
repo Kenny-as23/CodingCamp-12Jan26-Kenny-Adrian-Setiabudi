@@ -352,16 +352,16 @@ h2 {
   background: var(--bg);
 }
 
-/* GRID */
+/* =========================================================
+   PROJECT GRID – DESKTOP (WAJIB)
+   ========================================================= */
 .project-grid {
-  max-width: 1200px;
-  margin: auto;
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
   align-items: start;
 }
+
 
 /* =========================================================
    LEFT SIDE (TEXT)
@@ -537,39 +537,7 @@ h2 {
   padding-left: 18px;
   line-height: 1.8;
   color: var(--text-muted);
-}
-
-/* =========================================================
-   RESPONSIVE PROJECT DETAIL
-   ========================================================= */
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-left {
-    padding-right: 0;
-  }
-
-  .project-preview img {
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-left h1 {
-    font-size: 28px;
-  }
-
-  .project-subtitle,
-  .project-desc {
-    font-size: 15px;
-  }
-
-  .feature-card {
-    padding: 22px;
-  }
-}
+}   
 /* =========================================================
    NAVBAR GLOBAL (HOME PAGE)
    ========================================================= */
@@ -833,28 +801,6 @@ h2 {
 /* RIGHT */
 .nav-detail-container .theme-toggle {
   justify-self: end;
-}
-
-/* MOBILE DETAIL NAV */
-@media (max-width: 480px) {
-
-  .nav-detail-container {
-    padding: 12px 14px;
-  }
-
-  .nav-detail-container .back-link {
-    font-size: 0;
-    padding: 6px 10px;
-  }
-
-  .nav-detail-container .back-link::before {
-    content: "←";
-    font-size: 16px;
-  }
-
-  .nav-detail-container .nav-logo {
-    font-size: 16px;
-  }
 }
 
 /* =========================================================
@@ -1182,17 +1128,6 @@ h2 {
   padding-top: 40px;
 }
 
-/* GRID */
-.project-grid {
-  max-width: 1200px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
 /* LEFT */
 .project-left {
   padding-right: 20px;
@@ -1432,30 +1367,6 @@ h2 {
   justify-self: end;
 }
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 480px) {
-  .nav-detail-container {
-    padding: 12px 14px;
-  }
-
-  /* Back icon only */
-  .navbar-detail .back-link {
-    font-size: 0;
-    padding: 6px 10px;
-  }
-
-  .navbar-detail .back-link::before {
-    content: "←";
-    font-size: 16px;
-  }
-
-  .navbar-detail .nav-logo {
-    font-size: 16px;
-  }
-}
-
-
 /* ================= MOBILE DETAIL NAV (FIX FINAL) ================= */
 @media (max-width: 480px) {
 
@@ -1534,3 +1445,51 @@ section,
     color 0.45s ease,
     border-color 0.45s ease;
 }
+
+/* =========================================================
+   PROJECT DETAIL – MOBILE LAYOUT FIX (FINAL)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .project-left,
+  .project-right {
+    padding: 0;
+  }
+
+  /* jarak teks & gambar */
+  .tech-stack {
+    margin-bottom: 40px;
+  }
+
+  .project-preview {
+    margin-bottom: 48px;
+  }
+
+  /* gambar lebih rapi */
+  .project-preview img {
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  }
+
+  .feature-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .project-left h1 {
+    font-size: 26px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+  }
+}
+

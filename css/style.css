@@ -353,6 +353,17 @@ h2 {
 }
 
 /* =========================================================
+   PROJECT GRID – DESKTOP (WAJIB)
+   ========================================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+
+/* =========================================================
    LEFT SIDE (TEXT)
    ========================================================= */
 .project-left {
@@ -526,39 +537,7 @@ h2 {
   padding-left: 18px;
   line-height: 1.8;
   color: var(--text-muted);
-}
-
-/* =========================================================
-   RESPONSIVE PROJECT DETAIL
-   ========================================================= */
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-left {
-    padding-right: 0;
-  }
-
-  .project-preview img {
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-left h1 {
-    font-size: 28px;
-  }
-
-  .project-subtitle,
-  .project-desc {
-    font-size: 15px;
-  }
-
-  .feature-card {
-    padding: 22px;
-  }
-}
+}   
 /* =========================================================
    NAVBAR GLOBAL (HOME PAGE)
    ========================================================= */
@@ -1468,15 +1447,14 @@ section,
 }
 
 /* =========================================================
-   PROJECT DETAIL – MOBILE LAYOUT FIX (ADD ONLY)
+   PROJECT DETAIL – MOBILE LAYOUT FIX (FINAL)
    ========================================================= */
 
-/* 1️⃣ Grid jadi 1 kolom di mobile */
 @media (max-width: 768px) {
 
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
   }
 
   .project-left,
@@ -1484,7 +1462,7 @@ section,
     padding: 0;
   }
 
-  /* 2️⃣ Jarak antara teks & gambar */
+  /* jarak teks & gambar */
   .tech-stack {
     margin-bottom: 40px;
   }
@@ -1493,19 +1471,17 @@ section,
     margin-bottom: 48px;
   }
 
-  /* 3️⃣ Gambar lebih rapi */
+  /* gambar lebih rapi */
   .project-preview img {
     border-radius: 18px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.12);
   }
 
-  /* 4️⃣ Feature card tidak nempel */
   .feature-card {
     margin-top: 0;
   }
 }
 
-/* 5️⃣ Extra polish untuk HP kecil */
 @media (max-width: 480px) {
 
   .project-left h1 {
@@ -1516,3 +1492,4 @@ section,
     font-size: 15px;
   }
 }
+
