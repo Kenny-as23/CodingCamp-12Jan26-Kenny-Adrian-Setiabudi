@@ -352,17 +352,6 @@ h2 {
   background: var(--bg);
 }
 
-/* GRID */
-.project-grid {
-  max-width: 1200px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
 /* =========================================================
    LEFT SIDE (TEXT)
    ========================================================= */
@@ -833,28 +822,6 @@ h2 {
 /* RIGHT */
 .nav-detail-container .theme-toggle {
   justify-self: end;
-}
-
-/* MOBILE DETAIL NAV */
-@media (max-width: 480px) {
-
-  .nav-detail-container {
-    padding: 12px 14px;
-  }
-
-  .nav-detail-container .back-link {
-    font-size: 0;
-    padding: 6px 10px;
-  }
-
-  .nav-detail-container .back-link::before {
-    content: "←";
-    font-size: 16px;
-  }
-
-  .nav-detail-container .nav-logo {
-    font-size: 16px;
-  }
 }
 
 /* =========================================================
