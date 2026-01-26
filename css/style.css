@@ -1149,17 +1149,6 @@ h2 {
   padding-top: 40px;
 }
 
-/* GRID */
-.project-grid {
-  max-width: 1200px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
 /* LEFT */
 .project-left {
   padding-right: 20px;
@@ -1398,30 +1387,6 @@ h2 {
 .navbar-detail .theme-toggle {
   justify-self: end;
 }
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 480px) {
-  .nav-detail-container {
-    padding: 12px 14px;
-  }
-
-  /* Back icon only */
-  .navbar-detail .back-link {
-    font-size: 0;
-    padding: 6px 10px;
-  }
-
-  .navbar-detail .back-link::before {
-    content: "←";
-    font-size: 16px;
-  }
-
-  .navbar-detail .nav-logo {
-    font-size: 16px;
-  }
-}
-
 
 /* ================= MOBILE DETAIL NAV (FIX FINAL) ================= */
 @media (max-width: 480px) {
