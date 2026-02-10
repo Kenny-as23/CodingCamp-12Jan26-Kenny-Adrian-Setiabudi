@@ -1493,3 +1493,58 @@ section,
   }
 }
 
+/* =========================================================
+   TRANSCRIPT SECTION
+   ========================================================= */
+#transcript {
+  padding: 80px 20px;
+}
+
+.transcript-card {
+  max-width: 720px;
+  margin: auto;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+
+  border-radius: 26px;
+  padding: 32px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+
+  text-align: center;
+}
+
+.transcript-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.transcript-card p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.transcript-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.transcript-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(99,102,241,0.45);
+}
