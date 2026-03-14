@@ -9,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg);
 }
 
 html:not(.theme-ready) * {
@@ -18,7 +17,7 @@ html:not(.theme-ready) * {
 
 body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   line-height: 1.75;
 }
@@ -91,7 +90,7 @@ h2 {
   background: linear-gradient(
     135deg,
     rgba(99,102,241,0.08),
-    var(--bg)
+    transparent
   );
   padding: 120px 20px;
 }
@@ -114,10 +113,62 @@ h2 {
 /* =========================================================
    ABOUT
    ========================================================= */
-#about p {
+.about-text p {
   max-width: 720px;
   font-size: 17px;
   color: var(--text-muted);
+}
+
+/* =========================================================
+   ABOUT SECTION LAYOUT
+   ========================================================= */
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+/* FOTO */
+.about-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+
+  border-radius: 20px;
+  border: 2px solid var(--glass-border);
+
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* TEXT */
+.about-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   ABOUT MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo img {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+  }
+
 }
 
 /* =========================================================
@@ -240,11 +291,6 @@ h2 {
     box-shadow 0.45s ease;
 }
 
-.portfolio-card:hover {
-  transform: translateY(-10px) scale(1.01);
-  box-shadow: 0 35px 90px rgba(0,0,0,0.15);
-}
-
 /* =========================================================
    PORTFOLIO IMAGE
    ========================================================= */
@@ -258,11 +304,6 @@ h2 {
   transition:
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.6s ease;
-}
-
-.portfolio-card:hover img {
-  transform: scale(1.04);
-  filter: brightness(1.03);
 }
 
 /* =========================================================
@@ -349,7 +390,7 @@ h2 {
    ========================================================= */
 .project-detail {
   padding: 100px 20px;
-  background: var(--bg);
+  background: transparent;
 }
 
 /* =========================================================
@@ -368,25 +409,6 @@ h2 {
    ========================================================= */
 .project-left {
   padding-right: 20px;
-}
-
-.project-left h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.project-subtitle {
-  font-size: 18px;
-  color: var(--text-muted);
-  margin-bottom: 18px;
-}
-
-.project-desc {
-  font-size: 16px;
-  line-height: 1.8;
-  color: var(--text-muted);
-  margin-bottom: 28px;
 }
 
 /* =========================================================
@@ -480,18 +502,6 @@ h2 {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.tech-list span {
-  background: rgba(99,102,241,0.12);
-  color: var(--primary);
-
-  padding: 6px 14px;
-  border-radius: 999px;
-
-  font-size: 13px;
-  font-weight: 500;
-}
-
 /* =========================================================
    RIGHT SIDE (PREVIEW)
    ========================================================= */
@@ -510,34 +520,6 @@ h2 {
 
   box-shadow: 0 30px 70px rgba(0,0,0,0.18);
 }
-
-/* =========================================================
-   FEATURE CARD
-   ========================================================= */
-.feature-card {
-  margin-top: 24px;
-
-  background: var(--glass-bg);
-  backdrop-filter: blur(18px) saturate(160%);
-  -webkit-backdrop-filter: blur(18px) saturate(160%);
-
-  border-radius: 22px;
-  padding: 26px;
-  border: 1px solid var(--glass-border);
-
-  box-shadow: var(--glass-shadow);
-}
-
-.feature-card h3 {
-  font-size: 20px;
-  margin-bottom: 14px;
-}
-
-.feature-card ul {
-  padding-left: 18px;
-  line-height: 1.8;
-  color: var(--text-muted);
-}   
 
 /* CONTAINER */
 .nav-container {
@@ -1093,17 +1075,6 @@ h2 {
 /* =========================================================
    PROJECT DETAIL PAGE (FINAL)
    ========================================================= */
-
-.project-detail {
-  background: var(--bg);
-  padding-top: 40px;
-}
-
-/* LEFT */
-.project-left {
-  padding-right: 20px;
-}
-
 .project-left h1 {
   font-size: 42px;
   font-weight: 700;
@@ -1126,24 +1097,6 @@ h2 {
 /* =========================================================
    PROJECT STATS
    ========================================================= */
-.project-stats {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 30px;
-}
-
-.stat-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 14px;
-
-  padding: 14px 18px;
-  min-width: 110px;
-  text-align: center;
-
-  box-shadow: var(--glass-shadow);
-}
-
 .stat-card strong {
   font-size: 15px;
   color: var(--text);
@@ -1157,16 +1110,6 @@ h2 {
 /* =========================================================
    TECH STACK
    ========================================================= */
-.tech-stack {
-  margin-top: 20px;
-}
-
-.tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .tech-list span {
   background: rgba(99,102,241,0.15);
   color: var(--primary);
@@ -1544,4 +1487,325 @@ section,
     margin: 10px;
     border-radius: 999px;
   }
+}
+
+
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* variasi animasi */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.9s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================= SKILL CARD HOVER EFFECT ================= */
+
+.skill-card{
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* card naik */
+
+.skill-card:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* icon animasi */
+
+.skill-card img{
+  transition: transform 0.35s ease;
+}
+
+.skill-card:hover img{
+  transform: scale(1.15) rotate(3deg);
+}
+
+/* text animasi */
+
+.skill-card h3{
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover h3{
+  color: #6c8cff;
+}
+
+.skill-card:hover{
+  border: 1px solid rgba(108,140,255,0.4);
+}
+
+/* ================= GLOBAL CARD HOVER EFFECT ================= */
+
+.transcript-card,
+.certificate-card,
+.all-cert-card,
+.contact-list li{
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* efek naik */
+
+.transcript-card:hover,
+.certificate-card:hover,
+.all-cert-card:hover,
+.contact-list li:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* border glow */
+
+.transcript-card:hover,
+.certificate-card:hover,
+.all-cert-card:hover,
+.contact-list li:hover{
+  border: 1px solid rgba(120,140,255,0.4);
+}
+
+/* ================= PORTFOLIO CARD HOVER ================= */
+.portfolio-card:hover{
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.25);
+}
+
+.portfolio-card:hover img{
+  transform: scale(1.05);
+  filter: brightness(1.03);
+}
+
+/* title effect */
+
+.portfolio-card h3{
+  transition: color 0.3s ease;
+}
+
+.portfolio-card:hover h3{
+  color: #7b8cff;
+}
+
+/* button glow */
+
+.portfolio-card .btn-live{
+  transition: all 0.3s ease;
+}
+
+.btn-live:hover{
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(123,140,255,0.45);
+}
+
+/* details link animation */
+
+.portfolio-card .details-link{
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .details-link{
+  transform: translateX(5px);
+}
+
+/* ================= ANIMATED BACKGROUND ================= */
+
+.animated-bg{
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+
+  background:
+  radial-gradient(circle at 20% 20%, rgba(99,102,241,0.35), transparent 45%),
+  radial-gradient(circle at 80% 30%, rgba(139,92,246,0.35), transparent 45%),
+  radial-gradient(circle at 50% 80%, rgba(59,130,246,0.35), transparent 45%),
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  animation: bgBreath 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgBreath{
+
+  from{
+    filter: brightness(1);
+  }
+
+  to{
+    filter: brightness(1.12);
+  }
+
+}
+
+/* floating blobs */
+
+.blob{
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.7;
+
+  animation:
+  floatBlob 14s ease-in-out infinite,
+  rotateBlob 35s linear infinite;
+
+  will-change: transform;
+}
+
+.blob1{
+  background: #6366f1;
+  top: -150px;
+  left: -150px;
+}
+
+.blob2{
+  background: #8b5cf6;
+  bottom: -200px;
+  right: -150px;
+  animation-duration: 25s;
+}
+
+.blob3{
+  background: #3b82f6;
+  top: 40%;
+  left: 60%;
+  animation-duration: 30s;
+}
+
+.blob1{
+  animation-duration: 12s, 30s;
+}
+
+.blob2{
+  animation-duration: 16s, 40s;
+}
+
+.blob3{
+  animation-duration: 20s, 45s;
+}
+
+.blob{
+  will-change: transform;
+}
+
+.animated-bg{
+  will-change: filter;
+}
+
+@keyframes rotateBlob{
+
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+
+}
+
+/* animation */
+
+@keyframes floatBlob {
+
+  0%{
+    transform: translate3d(0,0,0) scale(1);
+  }
+
+  25%{
+    transform: translate3d(180px,-120px,0) scale(1.1);
+  }
+
+  50%{
+    transform: translate3d(-150px,160px,0) scale(1);
+  }
+
+  75%{
+    transform: translate3d(130px,90px,0) scale(1.07);
+  }
+
+  100%{
+    transform: translate3d(0,0,0) scale(1);
+  }
+
+}
+
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.25) 60%,
+    rgba(0,0,0,0.55) 100%
+  );
+
+  pointer-events: none;
+}
+
+.project-detail{
+  padding:100px 20px;
+  position:relative;
+  z-index:1;
+}
+
+.project-grid{
+  max-width:1100px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:48px;
+  align-items:start;
+}
+
+.project-preview{
+  margin-bottom:30px;
+}
+
+.panel-section{
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+section{
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }

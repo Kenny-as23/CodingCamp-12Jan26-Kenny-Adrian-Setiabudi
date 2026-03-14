@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Library CRUD System | Portfolio</title>
+  <title>Accessories Detection YOLO | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
   (function () {
@@ -15,109 +15,109 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-detail">
+
+<div class="animated-bg">
+  <span class="blob blob1"></span>
+  <span class="blob blob2"></span>
+  <span class="blob blob3"></span>
+</div>
+
+<nav class="navbar-detail">
+
   <div class="nav-detail-container">
 
-    <!-- LEFT -->
+    <!-- BACK BUTTON -->
     <a href="index.html#portfolio" class="back-link">
-      Back
+      ← Back
     </a>
 
-    <!-- CENTER -->
+    <!-- LOGO -->
     <div class="nav-logo">Kenny</div>
 
-    <!-- RIGHT -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-      <!-- SUN -->
+    <!-- THEME BUTTON -->
+    <button id="themeToggle" class="theme-toggle">
+
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-        <path stroke="currentColor" stroke-width="2"
-          d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12
-             M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
       </svg>
 
-      <!-- MOON -->
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M21 12.79A9 9 0 1111.21 3
-             7 7 0 0021 12.79z"
-          stroke="currentColor"
-          stroke-width="2"
-        />
+        <path d="M21 12.79A9 9 0 1111.21 3" stroke="currentColor" stroke-width="2"/>
       </svg>
+
     </button>
 
   </div>
+
 </nav>
 
-<!-- ================= PROJECT DETAIL ================= -->
-<section class="project-detail">
+<section class="project-detail reveal">
 
   <div class="project-grid">
 
-    <!-- LEFT CONTENT -->
-    <div class="project-left">
+    <div class="project-left reveal-left">
 
-      <h1>Library Management System</h1>
+      <h1>Accessories Detection YOLO</h1>
 
       <p class="project-subtitle">
-        Web-Based Library Management System
+        Real-Time Restricted Accessories Detection System
       </p>
 
       <p class="project-desc">
-        A web-based library management system designed to manage book data
-        and borrowing processes in a structured, secure, and user-friendly way.
-        Supports role-based authentication (Admin & User).
+        A real-time computer vision system using a custom-trained YOLO model
+        to detect restricted accessories such as earbuds, vape, hat, etc from live
+        camera input.
       </p>
 
-      <!-- STATS -->
       <div class="project-stats">
         <div class="stat-card">
-          <strong>Admin & User</strong>
-          <span>Roles</span>
+          <strong>YOLO</strong>
+          <span>Model</span>
         </div>
         <div class="stat-card">
-          <strong>CRUD</strong>
-          <span>System</span>
+          <strong>Real-Time</strong>
+          <span>Detection</span>
         </div>
         <div class="stat-card">
-          <strong>MySQL</strong>
-          <span>Database</span>
+          <strong>Custom</strong>
+          <span>Dataset</span>
         </div>
       </div>
 
-      <!-- TECHNOLOGIES -->
       <div class="tech-stack">
         <h3>Technologies Used</h3>
+
         <div class="tech-list">
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>XAMPP</span>
+          <span>Python</span>
+          <span>YOLO</span>
+          <span>OpenCV</span>
+          <span>Computer Vision</span>
+          <span>Deep Learning</span>
         </div>
       </div>
 
     </div>
 
-    <!-- RIGHT CONTENT -->
-    <div class="project-right">
+
+    <div class="project-right reveal-right">
 
       <div class="project-preview">
-        <img src="assets/images/login.png" alt="Library CRUD Preview">
+        <img src="assets/images/accessories-detection-yolo.png">
       </div>
 
       <div class="feature-card">
+
         <h3>Key Features</h3>
+
         <ul>
-          <li>Role-based authentication (Admin & User)</li>
-          <li>Book management with cover upload</li>
-          <li>Borrow & return system with validation</li>
-          <li>Borrowing history & status tracking</li>
-          <li>Search by title or author</li>
-          <li>Responsive dashboard UI</li>
+          <li>Custom YOLO object detection</li>
+          <li>Live camera inference</li>
+          <li>Restricted accessory alerts</li>
+          <li>Bounding box visualization</li>
+          <li>Confidence-based filtering</li>
+          <li>FPS monitoring</li>
         </ul>
+
       </div>
 
     </div>
@@ -126,53 +126,45 @@
 
 </section>
 
-<!-- ================= ADMIN & USER PREVIEW ================= -->
 <section class="panel-section">
-
   <div class="panel-grid">
 
-    <!-- ADMIN PANEL -->
     <div class="panel-card">
-      <img src="assets/images/library-crud-admin.png" alt="Admin Panel">
+      <img src="assets/images/yolo-earbuds.png" alt="Earbuds Detection">
 
-      <h3>Admin Panel</h3>
+      <h3>Accessory Detection</h3>
       <p>
-        Admin dashboard to manage books, users, and borrowing transactions.
-        Designed for efficient data control and validation.
+        Detects restricted accessories at office entrances using a dedicated camera, 
+        providing real-time bounding boxes and confidence scores for clear identification.
       </p>
 
       <ul>
-        <li>Manage book data (CRUD)</li>
-        <li>Upload & manage book covers</li>
-        <li>User role management</li>
-        <li>Borrowing & return validation</li>
+        <li>Earbuds detection</li>
+        <li>Confidence score display</li>
+        <li>Real-time bounding boxes</li>
+        <li>Single object tracking</li>
       </ul>
     </div>
 
-    <!-- USER PANEL -->
     <div class="panel-card">
-      <img src="assets/images/library-crud.png" alt="User Panel">
+      <img src="assets/images/yolo-2objects.png" alt="Glasses Detection">
 
-      <h3>User Panel</h3>
+      <h3>Alert System</h3>
       <p>
-        User-friendly interface allowing users to browse, search, and borrow
-        books independently.
+        Triggers a real-time visual warning when prohibited accessories are detected, 
+        supporting workplace compliance and entry control.
       </p>
 
       <ul>
-        <li>Browse & search books</li>
-        <li>Borrow available books</li>
-        <li>View borrowing history</li>
-        <li>Status tracking (Returned / Late)</li>
+        <li>Multiple object detection</li>
+        <li>Visual warning overlay</li>
+        <li>High-visibility alert UI</li>
+        <li>Real-time FPS display</li>
       </ul>
     </div>
 
   </div>
-
 </section>
-
-<!-- ================= GLOBAL SCRIPT (WAJIB) ================= -->
-<script src="js/script.js"></script>
-
 </body>
+<script src="js/script.js"></script>
 </html>

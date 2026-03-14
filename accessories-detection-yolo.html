@@ -16,47 +16,49 @@
 </head>
 <body>
 
-<nav class="navbar navbar-detail">
+<div class="animated-bg">
+  <span class="blob blob1"></span>
+  <span class="blob blob2"></span>
+  <span class="blob blob3"></span>
+</div>
+
+<nav class="navbar-detail">
+
   <div class="nav-detail-container">
 
-    <!-- LEFT -->
+    <!-- BACK BUTTON -->
     <a href="index.html#portfolio" class="back-link">
-      Back
+      ← Back
     </a>
 
-    <!-- CENTER -->
+    <!-- LOGO -->
     <div class="nav-logo">Kenny</div>
 
-    <!-- RIGHT -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-      <!-- SUN -->
+    <!-- THEME BUTTON -->
+    <button id="themeToggle" class="theme-toggle">
+
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-        <path stroke="currentColor" stroke-width="2"
-          d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12
-             M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
       </svg>
 
-      <!-- MOON -->
       <svg class="icon-moon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M21 12.79A9 9 0 1111.21 3
-             7 7 0 0021 12.79z"
-          stroke="currentColor"
-          stroke-width="2"
-        />
+        <path d="M21 12.79A9 9 0 1111.21 3" stroke="currentColor" stroke-width="2"/>
       </svg>
+
     </button>
 
   </div>
+
 </nav>
 
-<section class="project-detail">
+<section class="project-detail reveal">
 
   <div class="project-grid">
-    <div class="project-left">
+
+    <div class="project-left reveal-left">
 
       <h1>Accessories Detection YOLO</h1>
+
       <p class="project-subtitle">
         Real-Time Restricted Accessories Detection System
       </p>
@@ -64,8 +66,7 @@
       <p class="project-desc">
         A real-time computer vision system using a custom-trained YOLO model
         to detect restricted accessories such as earbuds, vape, hat, etc from live
-        camera input. The system provides confidence-based detection, FPS
-        monitoring, and visual alert overlays.
+        camera input.
       </p>
 
       <div class="project-stats">
@@ -85,6 +86,7 @@
 
       <div class="tech-stack">
         <h3>Technologies Used</h3>
+
         <div class="tech-list">
           <span>Python</span>
           <span>YOLO</span>
@@ -96,14 +98,17 @@
 
     </div>
 
-    <div class="project-right">
+
+    <div class="project-right reveal-right">
 
       <div class="project-preview">
-        <img src="assets/images/accessories-detection-yolo.png" alt="YOLO Detection Preview">
+        <img src="assets/images/accessories-detection-yolo.png">
       </div>
 
       <div class="feature-card">
+
         <h3>Key Features</h3>
+
         <ul>
           <li>Custom YOLO object detection</li>
           <li>Live camera inference</li>
@@ -112,9 +117,11 @@
           <li>Confidence-based filtering</li>
           <li>FPS monitoring</li>
         </ul>
+
       </div>
 
     </div>
+
   </div>
 
 </section>
@@ -158,6 +165,6 @@
 
   </div>
 </section>
-<script src="js/script.js"></script>
 </body>
+<script src="js/script.js"></script>
 </html>
