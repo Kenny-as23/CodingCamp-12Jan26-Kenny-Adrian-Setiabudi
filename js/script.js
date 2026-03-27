@@ -97,7 +97,8 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.15
+threshold: 0.25,
+rootMargin: "0px 0px -120px 0px"
 });
 
 reveals.forEach(el => observer.observe(el));

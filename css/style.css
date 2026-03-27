@@ -189,11 +189,6 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-}
-
 .card h3 {
   margin-bottom: 10px;
 }
@@ -286,11 +281,10 @@ h2 {
   display: flex;
   flex-direction: column;
 
-  transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s ease;
+  transition: 
+  opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+  transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 /* =========================================================
    PORTFOLIO IMAGE
    ========================================================= */
@@ -302,10 +296,9 @@ h2 {
   margin-bottom: 16px;
 
   transition:
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.6s ease;
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
 }
-
 /* =========================================================
    PORTFOLIO TEXT
    ========================================================= */
@@ -1492,41 +1485,33 @@ section,
 
 /* ================= SCROLL ANIMATION ================= */
 
-.reveal {
+.reveal,
+.reveal-left,
+.reveal-right {
   opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.9s ease;
+  transform: translateY(50px);
+  transition: 
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.1s;
+  will-change: transform, opacity;
 }
 
-.reveal.active {
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* variasi animasi */
-
+/* arah */
 .reveal-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: all 0.9s ease;
-}
-
-.reveal-left.active {
-  opacity: 1;
-  transform: translateX(0);
+  transform: translateX(-50px);
 }
 
 .reveal-right {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: all 0.9s ease;
+  transform: translateX(50px);
 }
-
-.reveal-right.active {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* ================= SKILL CARD HOVER EFFECT ================= */
 
 .skill-card{
@@ -1597,9 +1582,18 @@ section,
 }
 
 /* ================= PORTFOLIO CARD HOVER ================= */
-.portfolio-card:hover{
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 28px 65px rgba(0,0,0,0.25);
+.portfolio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.portfolio-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio-card:active {
+  transform: scale(0.97);
 }
 
 .portfolio-card:hover img{
@@ -1652,7 +1646,7 @@ section,
   radial-gradient(circle at 50% 80%, rgba(59,130,246,0.35), transparent 45%),
   url("https://grainy-gradients.vercel.app/noise.svg");
 
-  animation: bgBreath 10s ease-in-out infinite alternate;
+  animation: bgBreath 18s ease-in-out infinite alternate;
 }
 
 @keyframes bgBreath{
@@ -1678,10 +1672,8 @@ section,
   opacity: 0.7;
 
   animation:
-  floatBlob 14s ease-in-out infinite,
-  rotateBlob 35s linear infinite;
-
-  will-change: transform;
+  floatBlob 28s ease-in-out infinite,
+  rotateBlob 80s linear infinite;
 }
 
 .blob1{
@@ -1694,30 +1686,16 @@ section,
   background: #8b5cf6;
   bottom: -200px;
   right: -150px;
-  animation-duration: 25s;
 }
 
 .blob3{
   background: #3b82f6;
   top: 40%;
   left: 60%;
-  animation-duration: 30s;
-}
-
-.blob1{
-  animation-duration: 12s, 30s;
-}
-
-.blob2{
-  animation-duration: 16s, 40s;
-}
-
-.blob3{
-  animation-duration: 20s, 45s;
 }
 
 .blob{
-  will-change: transform;
+  transform: translateZ(0);
 }
 
 .animated-bg{
@@ -1739,27 +1717,11 @@ section,
 /* animation */
 
 @keyframes floatBlob {
-
-  0%{
-    transform: translate3d(0,0,0) scale(1);
-  }
-
-  25%{
-    transform: translate3d(180px,-120px,0) scale(1.1);
-  }
-
-  50%{
-    transform: translate3d(-150px,160px,0) scale(1);
-  }
-
-  75%{
-    transform: translate3d(130px,90px,0) scale(1.07);
-  }
-
-  100%{
-    transform: translate3d(0,0,0) scale(1);
-  }
-
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  25%  { transform: translate3d(120px,-80px,0) scale(1.05); }
+  50%  { transform: translate3d(-100px,120px,0) scale(1.02); }
+  75%  { transform: translate3d(90px,60px,0) scale(1.04); }
+  100% { transform: translate3d(0,0,0) scale(1); }
 }
 
 body::before{
