@@ -17,7 +17,6 @@ html:not(.theme-ready) * {
 
 body {
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  background: transparent;
   color: var(--text);
   line-height: 1.75;
 }
@@ -270,7 +269,7 @@ h2 {
    ========================================================= */
 .portfolio-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(10px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
 
   border-radius: 26px;
@@ -1489,12 +1488,21 @@ section,
 .reveal-left,
 .reveal-right {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(60px);
+
   transition: 
-    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    transition-delay: 0.1s;
-  will-change: transform, opacity;
+    opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  transition-delay: 0.15s;
+}
+
+.reveal.active {
+  transition-delay: 0s;
+}
+
+.reveal {
+  will-change: opacity, transform;
 }
 
 .reveal.active,
@@ -1632,142 +1640,8 @@ section,
   transform: translateX(5px);
 }
 
-/* ================= ANIMATED BACKGROUND ================= */
-
-.animated-bg{
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  overflow: hidden;
-
-  background:
-  radial-gradient(circle at 20% 20%, rgba(99,102,241,0.35), transparent 45%),
-  radial-gradient(circle at 80% 30%, rgba(139,92,246,0.35), transparent 45%),
-  radial-gradient(circle at 50% 80%, rgba(59,130,246,0.35), transparent 45%),
-  url("https://grainy-gradients.vercel.app/noise.svg");
-
-  animation: bgBreath 18s ease-in-out infinite alternate;
-}
-
-@keyframes bgBreath{
-
-  from{
-    filter: brightness(1);
-  }
-
-  to{
-    filter: brightness(1.12);
-  }
-
-}
-
-/* floating blobs */
-
-.blob{
-  position: absolute;
-  width: 650px;
-  height: 650px;
-  border-radius: 50%;
-  filter: blur(140px);
-  opacity: 0.7;
-
-  animation:
-  floatBlob 28s ease-in-out infinite,
-  rotateBlob 80s linear infinite;
-}
-
-.blob1{
-  background: #6366f1;
-  top: -150px;
-  left: -150px;
-}
-
-.blob2{
-  background: #8b5cf6;
-  bottom: -200px;
-  right: -150px;
-}
-
-.blob3{
-  background: #3b82f6;
-  top: 40%;
-  left: 60%;
-}
-
-.blob{
-  transform: translateZ(0);
-}
-
-.animated-bg{
-  will-change: filter;
-}
-
-@keyframes rotateBlob{
-
-  from{
-    transform: rotate(0deg);
-  }
-
-  to{
-    transform: rotate(360deg);
-  }
-
-}
-
-/* animation */
-
-@keyframes floatBlob {
-  0%   { transform: translate3d(0,0,0) scale(1); }
-  25%  { transform: translate3d(120px,-80px,0) scale(1.05); }
-  50%  { transform: translate3d(-100px,120px,0) scale(1.02); }
-  75%  { transform: translate3d(90px,60px,0) scale(1.04); }
-  100% { transform: translate3d(0,0,0) scale(1); }
-}
-
-body::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.25) 60%,
-    rgba(0,0,0,0.55) 100%
-  );
-
-  pointer-events: none;
-}
-
-.project-detail{
-  padding:100px 20px;
-  position:relative;
-  z-index:1;
-}
-
-.project-grid{
-  max-width:1100px;
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:48px;
-  align-items:start;
-}
-
-.project-preview{
-  margin-bottom:30px;
-}
-
-.panel-section{
+body {
+  background: var(--bg);
   position: relative;
-  z-index: 1;
-  background: transparent;
-}
-
-section{
-  position: relative;
-  z-index: 1;
-  background: transparent;
+  overflow-x: hidden;
 }
